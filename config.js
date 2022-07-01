@@ -43,16 +43,16 @@ global.doc6 = 'application/vnd.android.package-archive'
 //owmner v card
 global.owner = ['6283121761811'] //ur owner number
 global.ownername = "dby"
-global.ytname = "kanjut" //ur yt chanel name
+global.ytname = "gaada yutub cukup donasi aja dana : 083121761811" //ur yt chanel name
 global.socialm = "woi" //ur github or insta name
 global.location = "India, Mizoram, Aizawl" //ur location
 
 //bot bombdy
-global.botname = "dababy" //ur bot name
+global.botname = "Dby BOT stiker" //ur bot name
 global.websitex = "https" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
-global.packname = "dby Bot Stickers\n\n\n\n\n\n\n "
-global.author = "berkanjut"
+global.packname = "Bot Stiker\n\n\n\n\n\n\n "
+global.author = "wa 62895329375765"
 global.themeemoji = "🐶"
 global.reactmoji = "😘"
 global.ownertag = ['6283121761811'] //ur owner tag
