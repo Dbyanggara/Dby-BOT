@@ -1645,30 +1645,6 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         }
                      }
             break
- 		case `nobg`:
-
-                    if ((isMedia && !m.message.videoMessage || isQuotedImage) && args.length == 0) {
-            const encmedia = isQuotedImage  ? JSON.parse(JSON.stringify(m).replace('quotedM','m')).message.extendedTextMessage.contextInfo : m
-            const media = await XeonBotInc.downloadAndSaveMediaMessage(encmedia)
-            ranw = getRandom('.webp')
-            ranp = getRandom('.png')           
-            keyrmbg = 'C5ZeygbiedTZixDJJrm663Az'
-            await removeBackgroundFromImageFile({path: media, apiKey: 'C5ZeygbiedTZixDJJrm663Az', size: 'auto', type: 'auto', ranp}).then(res => {
-            fs.unlinkSync(media)
-            let buffer = Buffer.from(res.base64img, 'base64')
-            fs.writeFileSync(ranp, buffer, (err) => {
-            if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
-            })
-            exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
-            fs.unlinkSync(ranp)
-            if (err) return reply(mess.error.stick)
-            XeonBotInc.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: m})
-            })
-            })
-            } else {
-            reply(`Kirim gambaar dengan caption ${prefix}nobg atau reply/tag gambar`)
-          	}
-         	break
 case 'menuxxx':
 case 'helpxxx':
 if (isBan) return reply(mess.ban)	 			
